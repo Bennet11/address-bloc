@@ -77,10 +77,10 @@ require_relative '../models/address_book'
         end
       end
 
-      describe "#import_from_csv_2" do
+      describe "#import from entries_2.csv" do
         it "imports entries from csv 2" do
-          book.import_from_csv("entries_2.csv)")
-          book(entries.count.size).to eq 3
+          book.import_from_csv("entries_2.csv")
+          expect(book.entries.size).to eq 3
         end
 
         it "imports the 1st entry" do
