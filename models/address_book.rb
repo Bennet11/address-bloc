@@ -15,6 +15,6 @@ class AddressBook
       end
       index += 1
     end
-    entries.inser(index, Entry.new(name, phone_number, email))
+    entries.insert(index, Entry.new(name, phone_number, email))
   end
 end
