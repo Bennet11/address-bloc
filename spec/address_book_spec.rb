@@ -80,7 +80,7 @@ require_relative '../models/address_book'
       describe "#import_from_csv_2" do
         it "imports entries from csv 2" do
           book.import_from_csv("entries_2.csv)")
-          book(entries.count.size) eq to 3
+          book(entries.count.size).to eq 3
         end
 
         it "imports the 1st entry" do
@@ -99,6 +99,6 @@ require_relative '../models/address_book'
          book.import_from_csv("entries_2.csv")
          entry_three = book.entries[2]
          check_entry(entry_three, "Joe", "555-555-3660", "joe@blocmail.com")
-        end  
+        end
       end
     end
