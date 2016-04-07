@@ -125,4 +125,14 @@ require_relative '../models/address_book'
           expect(entry).to be_nil
         end
       end
+
+      describe "#nuke" do
+        it "should delete all entries" do
+          book.add_entry("Bob", "555-555-5415", "bob@blocmail.com")
+          book.add_entry("Sussie", "555-555-2036", "sussie@blocmail.com")
+          book.add_entry("Sally", "555-555-4646", "sally@blocmail.com")
+          book.nuke
+          expect(book.entries.size).to eq 0
+        end
+      end
     end
